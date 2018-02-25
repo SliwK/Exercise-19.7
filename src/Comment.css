@@ -1,0 +1,14 @@
+button {
+  margin: 2px;
+}
+
+li {
+  list-style:circle;
+  text-align: left;
+}
+
+.Add {
+  text-align: center;
+  font-weight: bold;
+  margin: 30px;
+}

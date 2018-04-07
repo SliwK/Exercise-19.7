@@ -4,7 +4,11 @@ import sinon from 'sinon';
 import React from 'react';
 import Comment from '../src/Comment';
 
-describe('CommentsList', function(){
+describe('Comment', function(){
+
+  it('it should render without crushing', function() {
+    shallow(<Comment />);
+  });
 
   it("should render button with class thumb-up", function(){
     const wrapper = shallow(
@@ -22,7 +26,7 @@ describe('CommentsList', function(){
     expect(wrapper.find('.thumb-down')).to.have.length(1)
   });
 
-  it("should render button with class thumb-down", function(){
+  it("should render button with class edit", function(){
     const wrapper = shallow(
       <li>
         <button className="edit" />
@@ -30,7 +34,7 @@ describe('CommentsList', function(){
     expect(wrapper.find('.edit')).to.have.length(1)
   });
 
-  it("should render button with class thumb-down", function(){
+  it("should render button with class remove", function(){
     const wrapper = shallow(
       <li>
         <button className="remove" />

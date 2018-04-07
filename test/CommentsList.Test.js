@@ -22,7 +22,7 @@ describe('CommentsList', function(){
       comment: "test 1"
     }]
     const wrapper = shallow(<CommentsList comments={commentsListMock} addComment={() => null}/>);
-    console.log("console:" , wrapper.debug());
+//    console.log("console:" , wrapper.debug());
 
     expect(wrapper.find(Comment)).to.have.length(2);
   });

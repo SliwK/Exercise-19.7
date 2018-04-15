@@ -28,12 +28,9 @@ describe('CommentsList', function(){
   });
 
 
-  it("should render button with class Add", function(){
-    const wrapper = shallow(
-      <ul>
-        <button className="Add" />
-      </ul>);
-    expect(wrapper.find('.Add')).to.have.length(1)
+  it("should render button with class Add!", function(){
+    const wrapper = shallow(<CommentsList comments={[]} addComment={() => null}/>);
+    expect(wrapper.find('.Add')).to.have.length(1);
   });
 
 
